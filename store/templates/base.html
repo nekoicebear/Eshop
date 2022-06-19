@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>웹프로그래밍 문구상점</title>
+
+  <style>
+    nav{
+      background-color: white;
+    }
+    .one-edge-shadow {
+              box-shadow: 0 8px 2px -5px rgb(246, 245, 245);
+}
+.display-8{
+  font-weight: 200;
+  font-size: 30px;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="one-edge-shadow
+  sticky-top navbar
+  navbar-expand-lg
+   navbar-light" style="background-color: #F3E5F5;">
+<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <a class="navbar-brand" href="/">
+      <img src="https://postfiles.pstatic.net/MjAyMjA2MTlfNzgg/MDAxNjU1NjEwMzMwMTUw.-W2dZoTysJrOwI-g-xDXIZ8oxcdo_sZ1xq70w44IqvMg.SAHgjBCQybCwZ6a6Udn1rigWBphgq7J0y1VPQ7dj5wUg.JPEG.nekoicebear/yjmun.jpg?type=w966" alt="" width="50" height="35" class="d-inline-block align-text-top"> YJ 문구 </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/store">
+            <img src="https://cdn.pixabay.com/photo/2017/01/13/01/22/icon-1976100_1280.png" alt="" width="30" height="21" class="d-inline-block align-text-top">홈 화면 <span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+
+      <ul class= "navbar-nav my-2 my-lg-0">
+        <li class= "nav-item">
+          <a class="nav-link" href="/cart">
+            <img src="https://cdn.pixabay.com/photo/2014/04/02/10/53/shopping-cart-304843_1280.png" alt="" width="30" height="20" class="d-inline-block align-text-top">장바구니
+            <span class="badge badge-info">{{request.session.cart.keys|length}}</span>
+            <span class="sr-only">(current)</span></a>
+        </li>
+        {% if request.session.customer %}
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/orders">주문.배송 상태<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/logout">로그아웃<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/signup">회원가입<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/login">로그인<span class="sr-only">(current)</span></a>
+        </li>
+        {% endif %}
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+    {% block content %}
+
+  {% endblock %}
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+<body class="d-flex flex-column min-vh-100">
+        <content> (주)박연재 </content>
+        <footer class="mt-auto"></footer>
+</body>
+
+</html>
