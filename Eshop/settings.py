@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@2*-8r&5jtn@u)w5wwpc423u84k1yce$qr$u(ybk4)918d0l0u
 DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'nekoicebear.pythonanywhere.com',
-                 'nekoicebear.pythonanywhere.com']
+                 'http://127.0.0.1:8000/store.pythonanywhere.com']
 
 
 # Application definition
