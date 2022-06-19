@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@2*-8r&5jtn@u)w5wwpc423u84k1yce$qr$u(ybk4)918d0l0u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [host_validation_re = re.compile(r"^([a-z0-9.-]+|\[[a-f0-9]*:[a-f0-9:]+\])(:\d+)?$")]
 
 
 # Application definition
